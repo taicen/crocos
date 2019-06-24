@@ -3,15 +3,16 @@ import ReactDOM from 'react-dom';
 import './styles/main.sass';
 
 import { Provider } from 'unistore/react';
-import Store from '~/state/Store';
+import Store from './state/Store';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import App from '~/components/App';
-import Home from '~/components/Home';
-import Posts from '~/components/Posts';
-import Post from '~/components/Post';
-import Error from '~/components/Error';
+import App from './App';
+
+import Home from './pages/Home';
+import Posts from './pages/Posts';
+import Post from './pages/Post';
+import Error from './pages/Error';
 
 ReactDOM.render(
   <Provider store={Store}>
@@ -21,7 +22,6 @@ ReactDOM.render(
           <Route exact path='/' component={Home} />
           <Route exact path='/posts' component={Posts} />
           <Route path='/post/:id' component={Post} />
-          {/* <Route path='/post/:id' component={Post} /> */}
           <Route path='*' component={Error} />
         </Switch>
       </App>

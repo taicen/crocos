@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+
+import Navigation from '../Navigation';
+import Button from '../../modules/Button';
 
 const Header = () => {
   const [count, setCount] = useState(0);
@@ -15,20 +17,17 @@ const Header = () => {
         <div className="is-brand">
             <b className="is-logo">Brand</b>
         </div>
-
         <div className="is-navbar">
-          <nav>
-            <ul className="nav">
-              <li><NavLink exact to='/'>Home</NavLink></li>
-              <li><NavLink to='/posts'>Posts</NavLink></li>
-            </ul>
-          </nav>
+          <Navigation />
         </div>
         <div>
           <p>Вы кликнули {count} раз</p>
           <button onClick={() => setCount(count + 1)}>
             Нажми на меня
           </button>
+        </div>
+        <div>
+          <Button/>
         </div>
       </div>
     </header>

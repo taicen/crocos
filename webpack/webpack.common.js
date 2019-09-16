@@ -105,7 +105,7 @@ module.exports = {
           }
         ],
         include: [
-          Path.resolve(__dirname, '../src/styles')
+          Path.resolve(__dirname, '../src')
         ]
       },
       {
